@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD - CBSE School</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            from {
+                border-right-color: transparent;
+            }
+            to {
+                border-right-color: white;
+            }
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to right, #16a085, #1abc9c);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: white;
+            color: #16a085;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://envs.sh/1XR.jpg') no-repeat center center/cover;
+            height: 600px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid white;
+            width: 22ch;
+            animation: typing 4s steps(22, end) infinite, blink 0.5s step-end infinite;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            padding: 15px 30px;
+            background: #1abc9c;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .hero button:hover {
+            background: #16a085;
+            transform: scale(1.1);
+        }
+
+        /* Scrolling Image Carousel */
+        .carousel {
+            width: 100%;
+            overflow: hidden;
+            background: #f7f7f7;
+            padding: 40px 0;
+            position: relative;
+        }
+
+        .carousel h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .carousel-track {
+            display: flex;
+            position: relative;
+            animation: scroll 20s linear infinite;
+        }
+
+        .carousel-track img {
+            width: 300px;
+            height: 200px;
+            margin: 0 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInOut 6s infinite;
+        }
+
+        /* Footer */
+        footer {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        footer a {
+            color: #1abc9c;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #16a085;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">MD SCHOOL</div>
+            <nav>
+                <ul>
+                    <li><a href="main">Home</a></li>
+                    <li><a href="https://anshu908.github.io/MD-ABOUT/">About</a></li>
+                    <li><a href="https://anshu908.github.io/contact-MD/">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>MD MEMORIAL ACADEMY</h1>
+        <p>Your perfect partner for CBSE education with state-of-the-art facilities.</p>
+        <button onclick="window.location.href='https://anshu908.github.io/contact-MD/';">Learn More</button>
+    </section>
+
+    <!-- Scrolling Image Carousel -->
+    <section class="carousel" id="carousel">
+        <h2>Our Classes & Events</h2>
+        <div class="carousel-track">
+            <img src="https://envs.sh/1Xy.jpg" alt="Classroom" onclick="openImage(this.src)">
+            <img src="https://envs.sh/1XX.jpg" alt="Playground" onclick="openImage(this.src)">
+            <img src="https://envs.sh/1XM.jpg" alt="Library" onclick="openImage(this.src)">
+            <img src="https://envs.sh/1XO.jpg" alt="Lab" onclick="openImage(this.src)">
+            <img src="https://envs.sh/1yD.jpg" alt="School Event" onclick="openImage(this.src)">
+            <img src="https://envs.sh/1yD.jpg" alt="Sports Day" onclick="openImage(this.src)">
+            <img src="https://envs.sh/1yD.jpg" alt="Cultural Event" onclick="openImage(this.src)">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 EduGrids. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function openImage(src) {
+            window.open(src, '_blank');
+        }
+    </script>
+</body>
+</html>
